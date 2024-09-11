@@ -14,24 +14,29 @@ namespace Bingo
             while (true)
             {
                 board.Display();
+                Console.WriteLine("----------------");
+                Console.WriteLine("   Press Enter");
 
-                Console.WriteLine("Press Enter to Draw ball");
+                cage.Display();
+                Console.ReadLine();
 
                 if (won)
                 {
-                    Console.WriteLine("BINGO!");
+                    Console.WriteLine("----------------");
+                    Console.WriteLine("     BINGO!");
                     Console.ReadLine();
                     break;
                 }
 
                 var picked = cage.PickBall();
+                Console.WriteLine("----------------");
                 Console.WriteLine($" Picked ball {picked}");
 
                 won = board.Update(picked);
                 
 
                 // PRINT PICKED NUMEROS
-                cage.Display();    
+                 
 
                 Console.ReadLine();
                 Console.Clear();
