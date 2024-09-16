@@ -44,7 +44,7 @@ namespace Bingo
             Console.WriteLine("----------------");
 
             Console.ForegroundColor = ConsoleColor.Red;
-          
+
             for (int i = 0; i < taken.Count; i++)
             {
                 if (i % 5 == 0 && i != 0)

@@ -11,7 +11,8 @@ namespace Bingo
         public int Value { get; set; }
         public bool Picked { get; set; }
 
-        public Ball(int value) { 
+        public Ball(int value)
+        {
             this.Value = value;
         }
 
@@ -24,7 +25,7 @@ namespace Bingo
 
             Console.Write(Value.ToString().PadLeft(3));
 
-            Console.ForegroundColor= ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
     }
 }

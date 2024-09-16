@@ -14,10 +14,10 @@ namespace Bingo
 
 
         Ball[,] balls = new Ball[WIDTH, HEIGHT];
-        List<int> chosen = new List<int>();
 
         public Board()
         {
+            // offsets column
             var min = 1;
             var max = 15;
 
@@ -51,6 +51,8 @@ namespace Bingo
         {
             Random rand = new Random();
 
+            List<int> chosen = new List<int>();
+
 
             while (true)
             {
@@ -69,7 +71,7 @@ namespace Bingo
             {
                 for (int j = 0; j < WIDTH; j++)
                 {
-                    if (balls[i,j].Value == picked)
+                    if (balls[i, j].Value == picked)
                     {
                         balls[i, j].Picked = true;
 
@@ -85,14 +87,14 @@ namespace Bingo
         {
             // Check Vertical
             var vertical = 0;
-            for(int i = 0;i < WIDTH;i++)
+            for (int i = 0; i < WIDTH; i++)
             {
                 for (int j = 0; j < HEIGHT; j++)
                 {
-                    if (balls[i,j].Picked == true)
+                    if (balls[i, j].Picked == true)
                     {
                         vertical++;
-                        if(vertical == 5 )
+                        if (vertical == 5)
                         {
                             return true;
                         }
@@ -119,8 +121,6 @@ namespace Bingo
 
                 horizontal = 0;
             }
-            // Overkill Diagonal
-
 
             return false;
         }
